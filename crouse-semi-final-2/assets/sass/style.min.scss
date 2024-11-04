@@ -1,0 +1,55 @@
+@use "animate";
+@use "bootstrap";
+@use "header";
+@use "all.min";
+@use "swiper-bundle.min";
+@use "aos";
+@use "layout";
+@use "main";
+@use "fonts";
+@use "footer";
+@use "hamburger";
+
+
+
+*{
+    font-family: "Shabnam";
+}
+
+@media (min-width:992px) {
+    .first-header-none{
+        display: block;
+    }
+    .responsive-header{
+        display: none;
+    }
+    
+}
+@media (max-width:992px) {
+    .first-header-none{
+        display: none !important;
+    }
+    .responsive-header{
+        display: block;
+        .img-box{
+            width: 50%;
+            img{
+                width: 100px;
+                max-width: 100%;
+            }
+        }
+    }
+    main{
+        padding-bottom: 60rem;
+    }
+    footer{
+        .img-white{
+            img{
+                width: 25%;
+            }
+        }
+    }
+    .slider-info{
+        display: none !important;
+    }
+}

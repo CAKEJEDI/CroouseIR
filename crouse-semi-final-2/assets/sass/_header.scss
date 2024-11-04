@@ -1,0 +1,115 @@
+header{
+    *{
+        transition: 0.5s;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+        padding: 1rem;
+    }
+    ul{
+        list-style: none;
+    }
+    .img-box{
+        width: 15%;
+        padding: 1rem;
+    }
+    .img-navbar{
+        width: 100%;
+    }
+    .btn-primary{
+        background-color: #155a9e;
+    }
+    .search-input{
+        transition: 0.5s;
+        
+        .btn-search{
+            position: absolute;
+            padding: 3px 8px;
+            top: 10px;
+            right: 376px;
+        }
+    }
+    .lang-btn{
+        color: #155a9e;
+    }
+    .nav-items{
+        position: relative;
+        ul{
+            padding: 0;
+            margin-top: 1rem;
+        li{
+            font-size: 0.9rem;
+            a{
+                padding: 0.5rem;
+                position: relative;
+            }
+            a:before{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                height: 1px;
+                width: 0;
+                background: #fc6d00;
+                border-radius: 50px;
+                transition: width 0.3s ease-in-out;
+            }
+            a:hover:before{
+                width: 90%;
+            }
+            
+        }
+        .parent{
+            .child{
+                display: none;
+                top: 1rem;
+                border-radius: 8px;
+                position: absolute;
+                box-shadow: 0 0 5px rgb(206, 206, 206);
+                height: auto;
+                width: 25%;
+                line-height: 2.5rem;
+                z-index: 9;
+                background-color: white;
+            }
+            
+        }
+        .parent.active{
+            .child{
+                display: block;
+            }
+        }
+    }
+    }
+}
+.items-after-sticky{
+    display: none;
+}
+header.sticky{
+    box-shadow: 1px 1px 10px gray;
+    transition: 0.5s;
+    top: 0;
+    right: 0;
+    position: sticky;
+    // padding: 5px 11px;
+    background: white;
+    z-index: 10;
+    .items-after-sticky{
+        display: block;
+    }
+    .search-input{
+        transition: 0.5s;
+        display: none !important;
+    }
+    .img-box{
+        transition: 0.5s;
+        width: 10%;
+    }
+}
+.responsive-header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 20;
+    background-color: white;
+}
